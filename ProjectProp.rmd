@@ -1,0 +1,30 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
+title: "Sentiment Analysis"
+Author: "Sushma V"
+
+# Sentiment Analysis
+
+## Analysis
+Analyze if the Net Promoter Score and Customer Effort Scores given by the customers really correlates to their actual sentiments written in the comments sections.
+Background: SaaS based companies send out surveys to customers to capture the user experience and these survey results contain two KPIs which is the Customer Effort score and the Net Promoter score.  The customer effort score gives insight into how easy/difficult it was for a user to have the issue resolved or addressed. The Net Promoter score gives insight into if the customer recommends the product/service or not.
+Both the metrics no doubt is valuable and quantifiable KPI, however doesn’t capture the feelings/sentiment of the customer. With the data available would also like to capture if the customer sentiments correlate to the ratings given.
+
+## Problem
+The problem to solve or explore into this text mining exercise to drive insights into what our customers want, what our customers like and dislike about our products rather than just scores. 
+
+## Data
+We will be analyzing the survey data results from past 3 years.
+
+##Approach:
+	The data will be retrieved from the CRM system for past 3 years (2018 YTD, 2017 and 2016)
+	The data will contain the following fields > Comment – CES (Text field), CES score (numeric), Comment-NPS (Text field), NPS score (numeric)
+	Data cleansing > approach to be discussed/determined
+	Results > next step analysis > TBD
+
+##Deliverables 
+Document the steps taken in word document. PPT to present high level approach and results.
+
