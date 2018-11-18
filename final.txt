@@ -1,0 +1,23 @@
+> Mydata <-read.csv("C:\\Users\\svittalarao\\Desktop\\refine_original.csv")
+> Mydata$company <- tolower(Mydata$company)
+> library(tidyr)
+> Mydata <- separate(Mydata,"Product.code...number", c("product_code", "product_number"), sep = "-")
+> Mydata$product_category <- sub(pattern = "^p$", replacement = "Smartphone", x = sub("^x$", "Laptop", sub("^v$", "TV", sub("^q$", "Tablet", Mydata$product_code))))
+> Mydata <- Mydata %>% 
++     mutate(full_address = paste(address, city, country, sep = ","))
+
+> Mydata <- mutate(Mydata, company_philips = ifelse(company == "Philips", 1, 0))
+> Mydata <- mutate(Mydata, company_akzo = ifelse(company == "Akzo", 1, 0))
+> Mydata <- mutate(Mydata, company_van_houten = ifelse(company == "Van Houten", 1, 0))
+> Mydata <- mutate(Mydata, company_unilever = ifelse(company == "Unilever", 1, 0))
+> Mydata <- mutate(Mydata, product_smartphone = ifelse(product_category == "Smartphone", 1, 0))
+> Mydata <- mutate(Mydata, product_tv = ifelse(product_category == "TV", 1, 0))
+> Mydata <- mutate(Mydata, product_laptop = ifelse(product_category == "Laptop", 1, 0))
+> Mydata <- mutate(Mydata, product_tablet = ifelse(product_category == "Tablet", 1, 0))
+
+
+
+
+
+
+
